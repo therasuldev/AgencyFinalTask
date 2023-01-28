@@ -1,0 +1,13 @@
+﻿@model PortfolioModel
+@{
+    ViewData["Title"] = "Detail";
+}
+Employee
+<h1>Detail</h1><br /><br />
+
+<div class="col-4">
+	<img src="~/assets/img/team/@Model.Image" height="100px" /><br /><br />
+	<h3>Title: @Model.Title</h3>
+	<h4>Subtitle: @Model.Subtitle</h4>
+	<a class="btn btn-info" asp-action="Index">Back</a>
+</div>

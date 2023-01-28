@@ -1,0 +1,38 @@
+﻿@model PortfolioModel
+@{
+    ViewData["Index"] = "Update";
+}
+<h1>Update</h1>
+<div class="col-6">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">Update Shippind</h4>
+			<form class="forms-sample formupdate" method="post" enctype="multipart/form-data">
+
+				<div class="form-group">
+					<label>Image</label>
+					<img style="height:80px" src="~/assets/img/team/@Model.Image" />
+					<input asp-for="Image" class="form-control" placeholder="Image">
+					<span class="text-danger" asp-validation-for="Image"></span>
+				</div>
+
+				<div class="form-group">
+					<label>Title</label>
+					<input asp-for="Title" class="form-control" placeholder="Title">
+					<span class="text-danger" asp-validation-for="Title"></span>
+				</div>
+
+				<div class="form-group">
+					<label>Subtitle</label>
+					<input asp-for="Subtitle" class="form-control" placeholder="Subtitle">
+					<span class="text-danger" asp-validation-for="Subtitle"></span>
+				</div>
+
+				<button class="btn btn-primary mr-2 updatebtn">Submit</button>
+				<a asp-action="Index" class="btn btn-light">Cancel</a>
+
+			</form>
+		</div>
+	</div>
+</div>
+
